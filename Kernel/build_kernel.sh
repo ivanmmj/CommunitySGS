@@ -1,5 +1,18 @@
 #/bin/bash
 
+Vibrant() {
+		HW_BOARD_REV=t959
+		HW_BOARD_REV=05
+}
+
+Captivate() {
+		HW_BOARD_REV=kepler
+		HW_BOARD_REV=03
+
+}
+
+
+
 echo "$1 $2 $3"
 
 case "$1" in
@@ -18,8 +31,14 @@ case "$1" in
 		exit
 		;;
 	*)
-		PROJECT_NAME=T959
-		HW_BOARD_REV="05"
+
+
+device=`zenity --title "Choose your device" --text "Please select your device from the following list." --height 380 --width 250 --list --radiolist --column "" --column "    Please Select An Option" True "Vibrant" False "Captivate"`
+		case $device in
+		 	"Vibrant")Vibrant;;
+		 	"Captivate")Captivate;;
+		esac
+
 		;;
 esac
 
