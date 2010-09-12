@@ -41,8 +41,8 @@ if [ "$CPU_JOB_NUM" = "" ] ; then
 	CPU_JOB_NUM=8
 fi
 
-TOOLCHAIN=../arm-none-eabi-4.3.4/bin
-TOOLCHAIN_PREFIX=arm-none-eabi-
+TOOLCHAIN=../arm-eabi-4.4.0/bin
+TOOLCHAIN_PREFIX=arm-eabi-
 
 KERNEL_BUILD_DIR=linux-2.6.29
 
