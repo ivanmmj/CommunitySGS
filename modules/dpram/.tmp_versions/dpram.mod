@@ -1,2 +1,2 @@
-/home/donghee.pi/Kernel/modules/dpram/dpram.ko
-/home/donghee.pi/Kernel/modules/dpram/dpram.o
+/home/ivan/Android/CommunitySGS/modules/dpram/dpram.ko
+/home/ivan/Android/CommunitySGS/modules/dpram/dpram.o

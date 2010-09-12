@@ -1,1 +1,1 @@
-cmd_/home/donghee.pi/Kernel/modules/s3clcd/s3c_lcd.ko := /home/donghee.pi/Kernel/../arm-2009q3/bin//arm-none-eabi-ld -EL -r   -o /home/donghee.pi/Kernel/modules/s3clcd/s3c_lcd.ko /home/donghee.pi/Kernel/modules/s3clcd/s3c_lcd.o /home/donghee.pi/Kernel/modules/s3clcd/s3c_lcd.mod.o
+cmd_/home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.ko := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL -r   -o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.ko /home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.mod.o

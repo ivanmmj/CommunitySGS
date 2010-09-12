@@ -1,1 +1,1 @@
-cmd_/home/donghee.pi/Kernel/modules/bcm4329/dhd.ko := /home/donghee.pi/Kernel/../arm-2009q3/bin//arm-none-eabi-ld -EL -r   -o /home/donghee.pi/Kernel/modules/bcm4329/dhd.ko /home/donghee.pi/Kernel/modules/bcm4329/dhd.o /home/donghee.pi/Kernel/modules/bcm4329/dhd.mod.o
+cmd_/home/ivan/Android/CommunitySGS/modules/bcm4329/dhd.ko := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL -r   -o /home/ivan/Android/CommunitySGS/modules/bcm4329/dhd.ko /home/ivan/Android/CommunitySGS/modules/bcm4329/dhd.o /home/ivan/Android/CommunitySGS/modules/bcm4329/dhd.mod.o

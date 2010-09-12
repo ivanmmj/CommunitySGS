@@ -1,7 +1,7 @@
-cmd_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := /home/donghee.pi/Kernel/../arm-2009q3/bin//arm-none-eabi-gcc -Wp,-MD,/home/donghee.pi/Kernel/modules/vibetonz/.tspdrv.o.d  -nostdinc -isystem /home/donghee.pi/arm-2009q3/bin/../lib/gcc/arm-none-eabi/4.4.1/include -Dlinux -Iinclude  -I/home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s5pc110/include -Iarch/arm/plat-s5pc11x/include -Iarch/arm/plat-s3c/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -Wframe-larger-than=1024 -fno-stack-protector -I/home/donghee.pi/Kernel/modules/include -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(tspdrv)"  -D"KBUILD_MODNAME=KBUILD_STR(vibrator)"  -c -o /home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o /home/donghee.pi/Kernel/modules/vibetonz/tspdrv.c
+cmd_/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-gcc -Wp,-MD,/home/ivan/Android/CommunitySGS/modules/vibetonz/.tspdrv.o.d  -nostdinc -isystem /home/ivan/Android/CommunitySGS/arm-none-eabi-4.3.4/bin/../lib/gcc/arm-none-eabi/4.3.4/include -Dlinux -Iinclude  -I/home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include -include include/linux/autoconf.h -D__KERNEL__ -mlittle-endian -Iarch/arm/mach-s5pc110/include -Iarch/arm/plat-s5pc11x/include -Iarch/arm/plat-s3c/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -marm -fno-omit-frame-pointer -mapcs -mno-sched-prolog -mabi=aapcs-linux -mno-thumb-interwork -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-stack-protector -I/home/ivan/Android/CommunitySGS/modules/include -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -DMODULE -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(tspdrv)"  -D"KBUILD_MODNAME=KBUILD_STR(vibrator)"  -c -o /home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o /home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.c
 
-deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
-  /home/donghee.pi/Kernel/modules/vibetonz/tspdrv.c \
+deps_/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o := \
+  /home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.c \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
@@ -33,23 +33,23 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/phys/addr/t/64bit.h) \
     $(wildcard include/config/64bit.h) \
   include/linux/posix_types.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/posix_types.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/types.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/posix_types.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/types.h \
   include/asm-generic/int-ll64.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/processor.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/processor.h \
     $(wildcard include/config/mmu.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/ptrace.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/arm/thumb.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/hwcap.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/cache.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/hwcap.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/system.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/sa1100.h) \
     $(wildcard include/config/cpu/sa110.h) \
   include/linux/linkage.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/linkage.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/linkage.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
@@ -57,11 +57,11 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/trace/irqflags/support.h) \
     $(wildcard include/config/x86.h) \
   include/linux/typecheck.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/irqflags.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/irqflags.h \
   include/asm-generic/cmpxchg-local.h \
   include/asm-generic/cmpxchg.h \
   include/linux/stat.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/stat.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/stat.h \
   include/linux/time.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
@@ -73,12 +73,12 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/dynamic/printk/debug.h) \
     $(wildcard include/config/numa.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /home/donghee.pi/arm-2009q3/bin/../lib/gcc/arm-none-eabi/4.4.1/include/stdarg.h \
+  /home/ivan/Android/CommunitySGS/arm-none-eabi-4.3.4/bin/../lib/gcc/arm-none-eabi/4.3.4/include/stdarg.h \
   include/linux/bitops.h \
     $(wildcard include/config/generic/find/first/bit.h) \
     $(wildcard include/config/generic/find/last/bit.h) \
     $(wildcard include/config/generic/find/next/bit.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/bitops.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/bitops.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/fls64.h \
   include/asm-generic/bitops/sched.h \
@@ -89,20 +89,20 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/arch/has/ilog2/u64.h) \
   include/linux/ratelimit.h \
   include/linux/param.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/param.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/param.h \
     $(wildcard include/config/hz.h) \
   include/linux/dynamic_printk.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/byteorder.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/linux/swab.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/swab.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/swab.h \
   include/linux/byteorder/generic.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/bug.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/div64.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/div64.h \
   include/linux/seqlock.h \
   include/linux/spinlock.h \
     $(wildcard include/config/debug/spinlock.h) \
@@ -114,12 +114,12 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/thread_info.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/arm/thumbee.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/fpstate.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/fpstate.h \
     $(wildcard include/config/vfpv3.h) \
     $(wildcard include/config/iwmmxt.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/domain.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/domain.h \
     $(wildcard include/config/io/36.h) \
   include/linux/stringify.h \
   include/linux/bottom_half.h \
@@ -131,7 +131,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/generic/hardirqs.h) \
   include/linux/spinlock_up.h \
   include/linux/spinlock_api_smp.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/atomic.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/atomic.h \
   include/asm-generic/atomic.h \
   include/linux/math64.h \
   include/linux/kmod.h \
@@ -157,7 +157,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/nodes/span/other/nodes.h) \
     $(wildcard include/config/holes/in/zone.h) \
   include/linux/wait.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/current.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/current.h \
   include/linux/threads.h \
     $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
@@ -168,19 +168,19 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/nodemask.h \
   include/linux/bitmap.h \
   include/linux/string.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/string.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/string.h \
   include/linux/pageblock-flags.h \
     $(wildcard include/config/hugetlb/page.h) \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/bounds.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/page.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
     $(wildcard include/config/cpu/copy/v4wb.h) \
     $(wildcard include/config/cpu/copy/feroceon.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/glue.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/glue.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm710.h) \
     $(wildcard include/config/cpu/abrt/lv4t.h) \
@@ -192,13 +192,13 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/cpu/abrt/ev7.h) \
     $(wildcard include/config/cpu/pabrt/ifar.h) \
     $(wildcard include/config/cpu/pabrt/noifar.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/memory.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/dram/size.h) \
     $(wildcard include/config/dram/base.h) \
   include/linux/const.h \
   arch/arm/mach-s5pc110/include/mach/memory.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/sizes.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/asm-generic/page.h \
@@ -207,7 +207,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/memory/hotremove.h) \
   include/linux/notifier.h \
   include/linux/errno.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/errno.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/errno.h \
   include/asm-generic/errno.h \
   include/asm-generic/errno-base.h \
   include/linux/mutex.h \
@@ -227,13 +227,13 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/debug/per/cpu/maps.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/topology.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/topology.h \
   include/asm-generic/topology.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/mmzone.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/mmzone.h \
   include/linux/elf.h \
   include/linux/elf-em.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/elf.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/user.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/elf.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/user.h \
   include/linux/kobject.h \
   include/linux/sysfs.h \
   include/linux/kref.h \
@@ -256,15 +256,15 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/debug/slab.h) \
   include/linux/slab_def.h \
   include/linux/kmalloc_sizes.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/percpu.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/percpu.h \
   include/asm-generic/percpu.h \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/completion.h \
   include/linux/rcuclassic.h \
     $(wildcard include/config/rcu/cpu/stall/detector.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/local.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/local.h \
   include/asm-generic/local.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/module.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/module.h \
   include/linux/timer.h \
     $(wildcard include/config/timer/stats.h) \
     $(wildcard include/config/debug/objects/timers.h) \
@@ -273,7 +273,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
     $(wildcard include/config/no/hz.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/timex.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/timex.h \
   arch/arm/plat-s3c/include/mach/timex.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects/free.h) \
@@ -291,7 +291,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/migration.h) \
   include/linux/limits.h \
   include/linux/ioctl.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/ioctl.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/ioctl.h \
   include/asm-generic/ioctl.h \
   include/linux/kdev_t.h \
   include/linux/dcache.h \
@@ -313,7 +313,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/nfs.h \
   include/linux/sunrpc/msg_prot.h \
   include/linux/fcntl.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/fcntl.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/fcntl.h \
   include/asm-generic/fcntl.h \
   include/linux/err.h \
   include/linux/version.h \
@@ -326,29 +326,29 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/klist.h \
   include/linux/pm.h \
     $(wildcard include/config/pm/sleep.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/device.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
   include/linux/pm_wakeup.h \
     $(wildcard include/config/pm.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/uaccess.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/uaccess.h \
   include/linux/hrtimer.h \
     $(wildcard include/config/high/res/timers.h) \
   include/linux/rbtree.h \
   include/linux/timed_output.h \
   include/linux/delay.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/delay.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/delay.h \
   include/linux/wakelock.h \
     $(wildcard include/config/has/wakelock.h) \
     $(wildcard include/config/wakelock/stat.h) \
-  /home/donghee.pi/Kernel/modules/vibetonz/tspdrv.h \
-  /home/donghee.pi/Kernel/modules/vibetonz/ImmVibeSPI.c \
+  /home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.h \
+  /home/ivan/Android/CommunitySGS/modules/vibetonz/ImmVibeSPI.c \
     $(wildcard include/config/s5pc110/t959/board.h) \
   include/linux/pwm.h \
   arch/arm/plat-s3c/include/plat/gpio-cfg.h \
     $(wildcard include/config/plat/s5pc11x.h) \
   include/linux/gpio.h \
     $(wildcard include/config/generic/gpio.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/gpio.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/gpio.h \
   arch/arm/mach-s5pc110/include/mach/gpio.h \
     $(wildcard include/config/s3c/gpio/space.h) \
     $(wildcard include/config/mach/s5pc110/p1p2.h) \
@@ -364,7 +364,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/aries/ver/b1.h) \
     $(wildcard include/config/aries/ver/b2.h) \
     $(wildcard include/config/aries/ver/b3.h) \
-  /home/donghee.pi/Kernel/modules/vibetonz/VibeOSKernelLinuxTime.c \
+  /home/ivan/Android/CommunitySGS/modules/vibetonz/VibeOSKernelLinuxTime.c \
   include/linux/kthread.h \
   include/linux/sched.h \
     $(wildcard include/config/sched/debug.h) \
@@ -403,20 +403,20 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/proc/fs.h) \
     $(wildcard include/config/mmu/notifier.h) \
   include/linux/auxvec.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/auxvec.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/mmu.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/auxvec.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/mmu.h \
     $(wildcard include/config/cpu/has/asid.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/cputime.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/cputime.h \
   include/asm-generic/cputime.h \
   include/linux/sem.h \
   include/linux/ipc.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/ipcbuf.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/sembuf.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/ipcbuf.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/sembuf.h \
   include/linux/signal.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/signal.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/signal.h \
   include/asm-generic/signal.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/sigcontext.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/siginfo.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/sigcontext.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/siginfo.h \
   include/asm-generic/siginfo.h \
   include/linux/fs_struct.h \
   include/linux/proportions.h \
@@ -428,7 +428,7 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/plist.h \
     $(wildcard include/config/debug/pi/list.h) \
   include/linux/resource.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/resource.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/resource.h \
   include/asm-generic/resource.h \
   include/linux/task_io_accounting.h \
     $(wildcard include/config/task/io/accounting.h) \
@@ -443,9 +443,9 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
   include/linux/aio_abi.h \
   include/linux/uio.h \
   include/linux/mount.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/pgtable.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/pgtable.h \
   include/asm-generic/4level-fixup.h \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/proc-fns.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/proc-fns.h \
     $(wildcard include/config/cpu/32.h) \
     $(wildcard include/config/cpu/arm7tdmi.h) \
     $(wildcard include/config/cpu/arm720t.h) \
@@ -464,12 +464,12 @@ deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o := \
     $(wildcard include/config/cpu/feroceon.h) \
     $(wildcard include/config/cpu/v6.h) \
     $(wildcard include/config/cpu/v7.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/cpu-single.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/cpu-single.h \
   arch/arm/plat-s3c/include/mach/vmalloc.h \
     $(wildcard include/config/ddr/ram/3g.h) \
-  /home/donghee.pi/Kernel/linux-2.6.29/arch/arm/include/asm/pgtable-hwdef.h \
+  /home/ivan/Android/CommunitySGS/linux-2.6.29/arch/arm/include/asm/pgtable-hwdef.h \
   include/asm-generic/pgtable.h \
 
-/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o: $(deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o)
+/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o: $(deps_/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o)
 
-$(deps_/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o):
+$(deps_/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o):

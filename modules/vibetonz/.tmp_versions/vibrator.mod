@@ -1,2 +1,2 @@
-/home/donghee.pi/Kernel/modules/vibetonz/vibrator.ko
-/home/donghee.pi/Kernel/modules/vibetonz/tspdrv.o
+/home/ivan/Android/CommunitySGS/modules/vibetonz/vibrator.ko
+/home/ivan/Android/CommunitySGS/modules/vibetonz/tspdrv.o

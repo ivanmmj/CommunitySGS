@@ -11,12 +11,7 @@ Captivate() {
 
 }
 
-
-
-echo "$1 $2 $3"
-
-case "$1" in
-	Clean)
+Clean() {
 		echo "********************************************************************************"
 		echo "* Clean Kernel                                                                 *"
 		echo "********************************************************************************"
@@ -29,18 +24,24 @@ case "$1" in
 		popd
 		echo " It's done... "
 		exit
-		;;
-	*)
+}
 
 
-device=`zenity --title "Choose your device" --text "Please select your device from the following list." --height 380 --width 250 --list --radiolist --column "" --column "    Please Select An Option" True "Vibrant" False "Captivate"`
+
+
+
+device=`zenity --title "Choose your device" --text "Please select your device from the following list." --height 380 --width 250 --list --radiolist --column "" --column "    Please Select An Option" True "Vibrant" False "Captivate" False "Clean Sources"`
 		case $device in
 		 	"Vibrant")Vibrant;;
 		 	"Captivate")Captivate;;
+			"Clean Sources")Clean;;
 		esac
 
-		;;
-esac
+
+
+echo "$1 $2 $3"
+
+
 
 if [ "$CPU_JOB_NUM" = "" ] ; then
 	CPU_JOB_NUM=8

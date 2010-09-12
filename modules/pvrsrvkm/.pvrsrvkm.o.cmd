@@ -1,1 +1,1 @@
-cmd_/home/donghee.pi/Kernel/modules/pvrsrvkm/pvrsrvkm.o := /home/donghee.pi/Kernel/../arm-2009q3/bin//arm-none-eabi-ld -EL    -r -o /home/donghee.pi/Kernel/modules/pvrsrvkm/pvrsrvkm.o /home/donghee.pi/Kernel/modules/pvrsrvkm/pvrsrvkm_module.o 
+cmd_/home/ivan/Android/CommunitySGS/modules/pvrsrvkm/pvrsrvkm.o := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL    -r -o /home/ivan/Android/CommunitySGS/modules/pvrsrvkm/pvrsrvkm.o /home/ivan/Android/CommunitySGS/modules/pvrsrvkm/pvrsrvkm_module.o 

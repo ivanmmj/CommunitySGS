@@ -1,2 +1,2 @@
-/home/donghee.pi/Kernel/modules/s3cbc/s3c_bc.ko
-/home/donghee.pi/Kernel/modules/s3cbc/s3cbc_module.o
+/home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.ko
+/home/ivan/Android/CommunitySGS/modules/s3cbc/s3cbc_module.o

@@ -1,1 +1,1 @@
-cmd_/home/donghee.pi/Kernel/modules/dpram/dpram.ko := /home/donghee.pi/Kernel/../arm-2009q3/bin//arm-none-eabi-ld -EL -r   -o /home/donghee.pi/Kernel/modules/dpram/dpram.ko /home/donghee.pi/Kernel/modules/dpram/dpram.o /home/donghee.pi/Kernel/modules/dpram/dpram.mod.o
+cmd_/home/ivan/Android/CommunitySGS/modules/dpram/dpram.ko := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL -r   -o /home/ivan/Android/CommunitySGS/modules/dpram/dpram.ko /home/ivan/Android/CommunitySGS/modules/dpram/dpram.o /home/ivan/Android/CommunitySGS/modules/dpram/dpram.mod.o
