@@ -4,3 +4,6 @@ Switch to CyanogenMod's version of the AOSP toolchain
 Set compiling options to use O3 and mtune=cortex-a8 as well as -mcpu=cortex-a8
 Add audio power fix
 Branch prediction?
+
+Add zip flashing
+add check for java, install java and sign zip
