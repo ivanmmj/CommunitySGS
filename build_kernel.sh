@@ -1,21 +1,19 @@
 #/bin/bash
 
 Vibrant() {
-		HW_BOARD_REV=t959
+		PROJECT_NAME=T959
 		HW_BOARD_REV=05
+
 }
 
 Captivate() {
-		HW_BOARD_REV=kepler
+		PROJECT_NAME=kepler
 		HW_BOARD_REV=03
 
 }
 
 Clean() {
-		echo "********************************************************************************"
-		echo "* Clean Kernel                                                                 *"
-		echo "********************************************************************************"
-
+		echo "Clean Kernel"
 		pushd linux-2.6.29
 		make clean
 		popd
@@ -27,9 +25,6 @@ Clean() {
 }
 
 
-
-
-
 device=`zenity --title "Choose your device" --text "Please select your device from the following list." --height 380 --width 250 --list --radiolist --column "" --column "    Please Select An Option" True "Vibrant" False "Captivate" False "Clean Sources"`
 		case $device in
 		 	"Vibrant")Vibrant;;
@@ -39,7 +34,6 @@ device=`zenity --title "Choose your device" --text "Please select your device fr
 
 
 
-echo "$1 $2 $3"
 
 
 
@@ -92,7 +86,12 @@ BUILD_KERNEL()
 
 	export KDIR=`pwd`
 
+
+
+
 	make ARCH=arm $PROJECT_NAME"_rev"$HW_BOARD_REV"_defconfig"
+
+
 
 	# make kernel
 	make -j$CPU_JOB_NUM HOSTCFLAGS="-g -O2" ARCH=arm CROSS_COMPILE=$TOOLCHAIN/$TOOLCHAIN_PREFIX
@@ -142,4 +141,4 @@ BUILD_KERNEL
 END_TIME=`date +%s`
 let "ELAPSED_TIME=$END_TIME-$START_TIME"
 echo "Total compile time is $ELAPSED_TIME seconds"
-
+read -n1 -r -p "Press any key to finish..."
