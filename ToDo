@@ -1,4 +1,4 @@
-Add the differences in recovery between devices for the initramfs and set option to automatically configure
+Fix to make sure it builds...
 Add all the other SGS based devices
 Switch to CyanogenMod's version of the AOSP toolchain
 Set compiling options to use O3 and mtune=cortex-a8 as well as -mcpu=cortex-a8
@@ -7,3 +7,6 @@ Branch prediction?
 
 Add zip flashing
 add check for java, install java and sign zip
+
+
+Add different initramfs's for each device. Set in configs.
