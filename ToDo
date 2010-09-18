@@ -9,3 +9,4 @@ add check for java, install java and sign zip
 
 Fix Module building
 Go back to ctng since aosp toolchain is causing a kernel panic.
+CONFIG_HZ to 100 and test
