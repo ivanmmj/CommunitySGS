@@ -7,3 +7,4 @@ Add different initramfs's for each device. Set in configs.
 Add option for auto tar or auto flashable zip.
 add check for java, install java and sign zip
 
+Fix Module building
