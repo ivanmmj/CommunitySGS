@@ -1,7 +1,10 @@
-#JAC init/XDA Voodoo
+#JAC init/XDA
 on init
+
 sysclktz 0
+
 loglevel 3
+
 # setup the global environment
     export PATH /sbin:/system/sbin:/system/bin:/system/xbin
     export LD_LIBRARY_PATH /system/lib:/system/lib/egl
@@ -13,8 +16,10 @@ loglevel 3
     export BOOTCLASSPATH /system/framework/core.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar
     export TMPDIR /data/local/tmp
 
+
 # Backward compatibility
     symlink /system/etc /etc
+
 	
 # to enable wifi
      setprop wifi.interface "eth0"
@@ -24,6 +29,7 @@ loglevel 3
 # bootsnd
     setprop audioflinger.bootsnd 1
 # end of bootsnd
+
 # Insert all modules here
     mkdir /lib/modules
     insmod /lib/modules/fsr.ko
@@ -38,6 +44,7 @@ loglevel 3
 	insmod /lib/modules/dpram.ko
 	insmod /lib/modules/multipdp.ko
 #	insmod /lib/modules/drop_caches.ko
+
 # create mountpoints and mount tmpfs on sqlite_stmt_journals
     mkdir /sdcard 0000 system system
     chown system system /sdcard
@@ -60,19 +67,23 @@ loglevel 3
     chmod 01777 /sqlite_stmt_journals
     mount tmpfs tmpfs /sqlite_stmt_journals size=4m
 
+
 ###################################################################    
 # create SEC_INTERNAL_STORAGE 1/2   
     mkdir /userdata 0771 system system
     chown system system /userdata
     chmod 0771 /userdata
 ###################################################################
+
 #    mount rootfs rootfs / ro remount
+
     write /proc/sys/kernel/panic_on_oops 1
     write /proc/sys/kernel/hung_task_timeout_secs 0
     write /proc/cpu/alignment 4
     write /proc/sys/kernel/sched_latency_ns 10000000
     write /proc/sys/kernel/sched_wakeup_granularity_ns 2000000
     write /proc/sys/kernel/sched_compat_yield 1
+
 # Create cgroup mount points for process groups
     mkdir /dev/cpuctl
     mount cgroup none /dev/cpuctl cpu
@@ -80,30 +91,45 @@ loglevel 3
     chown system system /dev/cpuctl/tasks
     chmod 0777 /dev/cpuctl/tasks
     write /dev/cpuctl/cpu.shares 1024
+
     mkdir /dev/cpuctl/fg_boost
     chown system system /dev/cpuctl/fg_boost/tasks
     chmod 0777 /dev/cpuctl/fg_boost/tasks
     write /dev/cpuctl/fg_boost/cpu.shares 1024
+
     mkdir /dev/cpuctl/bg_non_interactive
     chown system system /dev/cpuctl/bg_non_interactive/tasks
     chmod 0777 /dev/cpuctl/bg_non_interactive/tasks
     write /dev/cpuctl/bg_non_interactive/cpu.shares 52
 # mount mtd partitions
     # Mount /system rw first to give the filesystem a chance to save a checkpoint
+ ##   mount yaffs2 mtd@system /system 
+
     mount rfs /dev/block/stl9 /system check=no
+
+#    mount yaffs2 mtd@system /system ro remount
+
+    # We chown/chmod /data again so because mount is run as root + defaults
+##    mount yaffs2 mtd@userdata /data nosuid nodev
+
+#    mount rfs /dev/block/stl7 /data nosuid nodev check=no
+
+#    chown system system /data
+#    chmod 0771 /data
 
 ###################################################################    
 # create SEC_INTERNAL_STORAGE 2/2   
 ##    mount ext3 /dev/block/mmcblk0p1 /userdata nosuid nodev
-#  mount rfs /dev/block/mmcblk0p2 /data nosuid nodev check=no
+##    mount ext2 /dev/block/mmcblk0p2 /data nosuid nodev check=no
+    mount rfs /dev/block/mmcblk0p2 /data nosuid nodev check=no
     chown system system /data
     chmod 0771 /data
    
 ##    To Add the partition in Movinand of T959
-    mkdir /data_tmo
-    mount rfs /dev/block/mmcblk0p3 /data_tmo nosuid nodev check=no
-    chown system system /data_tmo
-    chmod 0771 /data_tmo
+#    mkdir /data_tmo
+#    mount rfs /dev/block/mmcblk0p3 /data_tmo nosuid nodev check=no
+#    chown system system /data_tmo
+#    chmod 0771 /data_tmo
    
 ###################################################################  
 
@@ -330,6 +356,36 @@ on boot
     setprop ro.CONTENT_PROVIDER_MEM 15500
     setprop ro.EMPTY_APP_MEM 16000
 
+# yjjung_20100613,  higher the watermark of low priority activities.
+#    setprop ro.FOREGROUND_APP_MEM 3072
+#    setprop ro.VISIBLE_APP_MEM 4096
+#    setprop ro.SECONDARY_SERVER_MEM 8192
+#    setprop ro.BACKUP_APP_MEM 8192
+#    setprop ro.HOME_APP_MEM 8192
+#    setprop ro.HIDDEN_APP_MEM 14500
+#    setprop ro.CONTENT_PROVIDER_MEM 15000
+#    setprop ro.EMPTY_APP_MEM 15500
+
+# yjjung_20100524,  higher the watermark of each activiry priority.
+#    setprop ro.FOREGROUND_APP_MEM 3072
+#    setprop ro.VISIBLE_APP_MEM 4096
+#    setprop ro.SECONDARY_SERVER_MEM 8192
+#    setprop ro.BACKUP_APP_MEM 8192
+#    setprop ro.HOME_APP_MEM 8192
+#    setprop ro.HIDDEN_APP_MEM 10240
+#    setprop ro.CONTENT_PROVIDER_MEM 11264
+#    setprop ro.EMPTY_APP_MEM 12288
+
+#	previous S1 watermarks
+#    setprop ro.FOREGROUND_APP_MEM 1536
+#    setprop ro.VISIBLE_APP_MEM 2048
+#    setprop ro.SECONDARY_SERVER_MEM 4096
+#    setprop ro.BACKUP_APP_MEM 4096
+#    setprop ro.HOME_APP_MEM 4096
+#    setprop ro.HIDDEN_APP_MEM 5120
+#    setprop ro.CONTENT_PROVIDER_MEM 5632
+#    setprop ro.EMPTY_APP_MEM 6144
+
 # Write value must be consistent with the above properties.
 # Note that the driver only supports 6 slots, so we have HOME_APP at the
 # same memory level as services.
@@ -338,20 +394,24 @@ on boot
     write /proc/sys/vm/overcommit_memory 1
     write /proc/sys/vm/min_free_order_shift 4
 
+#	yjjung_20100524, doubling minfree, since sum of free, file will be compared with minfree
+#    write /sys/module/lowmemorykiller/parameters/minfree 4096,8192,10240,11264,12288,14344
 # yjjung_20100613,  higher the watermark of low priority activities.
     write /sys/module/lowmemorykiller/parameters/minfree 4096,8192,14500,15000,15500,16000
+# 	previous S1 watermarks    
+#    write /sys/module/lowmemorykiller/parameters/minfree 2048,4096,5120,5632,6144,7172
 
     # Set init its forked children's oom_adj.
     write /proc/1/oom_adj -16
 
     # Tweak background writeout
-# Voodoo here: allow small data to be kept longer in dirty pages
-    write /proc/sys/vm/dirty_expire_centisecs 1000
-  # Voodoo here: reduce volume of data written when write cache is flushed
-    write /proc/sys/vm/dirty_background_ratio  2
+    write /proc/sys/vm/dirty_expire_centisecs 200
+    write /proc/sys/vm/dirty_background_ratio  5
 
    # permissions 
+
     chmod 666 /system/usr/keychars/s3c-keypad.kcm.bin 
+
     # Permissions for System Server and daemons.
     chown radio system /sys/android_power/state
     chown radio system /sys/android_power/request_state
@@ -412,9 +472,6 @@ on boot
     setprop net.tcp.buffersize.edge    4093,26280,35040,4096,16384,35040
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
-#Voodoo fix for OC kernels. Must leave at 1Ghz until voodoo init is done. 
-echo 1200000 >/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-
 # +++++++++++++++++++++++++++++++++++++++++++
 # for Bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -450,7 +507,6 @@ service playlogos1 /system/bin/playlogos1
     user root
     oneshot
 
-
 # adbd is controlled by the persist.service.adb.enable system property
 service adbd /sbin/adbd
     disabled
@@ -478,7 +534,6 @@ service servicemanager /system/bin/servicemanager
     onrestart restart media
 #magnetic sensor yamaha
     onrestart restart sensor-daemon
-
 service vold /system/bin/vold
     socket vold stream 0660 root mount
 
@@ -545,7 +600,6 @@ service dhcpcd /system/bin/dhcpcd eth0
 service ifcfg_eth0 /system/bin/ifconfig eth0 up
     disabled
     oneshot
-
 #for WiFi MFG(TestMode)
 service wlservice /system/bin/wlservice
     disabled
