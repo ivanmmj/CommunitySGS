@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.29
-# Sun Sep 12 00:43:00 2010
+# Sun Sep 12 00:44:27 2010
 #
 CONFIG_ARM=y
 CONFIG_HAVE_PWM=y
@@ -72,7 +72,7 @@ CONFIG_RESOURCE_COUNTERS=y
 # CONFIG_RELAY is not set
 # CONFIG_NAMESPACES is not set
 CONFIG_BLK_DEV_INITRD=y
-CONFIG_INITRAMFS_SOURCE="../../initramfs/initrd.arm.initramfs_list"
+CONFIG_INITRAMFS_SOURCE="../initramfs/initrd.arm.initramfs_list"
 CONFIG_INITRAMFS_ROOT_UID=0
 CONFIG_INITRAMFS_ROOT_GID=0
 CONFIG_CC_OPTIMIZE_FOR_SIZE=y

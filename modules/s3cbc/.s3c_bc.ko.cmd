@@ -1,1 +1,1 @@
-cmd_/home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.ko := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL -r   -o /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.ko /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.o /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.mod.o
+cmd_/home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.ko := ../arm-eabi-4.4.0/bin/arm-eabi-ld -EL -r   -o /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.ko /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.o /home/ivan/Android/CommunitySGS/modules/s3cbc/s3c_bc.mod.o

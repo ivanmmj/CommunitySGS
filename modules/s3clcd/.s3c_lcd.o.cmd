@@ -1,1 +1,1 @@
-cmd_/home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.o := ../arm-none-eabi-4.3.4/bin/arm-none-eabi-ld -EL    -r -o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3clcd_module.o 
+cmd_/home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.o := ../arm-eabi-4.4.0/bin/arm-eabi-ld -EL    -r -o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3c_lcd.o /home/ivan/Android/CommunitySGS/modules/s3clcd/s3clcd_module.o 
